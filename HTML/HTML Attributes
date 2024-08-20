@@ -1,0 +1,11 @@
+<html>
+<body>
+
+<h2>The href Attribute</h2>
+
+<p>HTML links are defined with the a tag. The link address is specified in the href attribute:</p>
+
+<a href="https://www.facebook.com/groups/1271806947522656">2425_K1_7080638_PTPMQL_NhomMT</a>
+
+</body>
+</html>
