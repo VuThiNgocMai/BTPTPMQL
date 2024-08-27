@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using DemoMVC.Models;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
 namespace DemoMVC.Controllers;
 
@@ -13,22 +14,33 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Demo()
     {
         return View();
     }
     [HttpPost]
-    public IActionResult Index (string Fullname, string Address)
+    public IActionResult Demo (string Fullname)
     {
-        string strOutput = " Xin Chào "+ Fullname + " đến từ " + Address;
-        ViewBag.Message = strOutput;
+        string strResult = "Hello" + Fullname;
+        ViewBag.thongbao = strResult;
         return View();
     }
+   
     public IActionResult Privacy()
     {
         return View();
     }
-
+     public IActionResult Index()
+    {
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Index(string Fullname, string Address)
+    {
+        string strResult = "Hello" + Fullname + "-" + Address;
+        ViewBag.Message = strResult; 
+        return View();
+    }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
