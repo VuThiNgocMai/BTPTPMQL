@@ -1,0 +1,13 @@
+<html>
+<body>
+
+<h2>An unordered HTML list</h2>
+
+<ul>
+  <li>Monday</li>
+  <li>Tuesday</li>
+  <li>Wesnetday</li>
+</ul>  
+
+</body>
+</html>
