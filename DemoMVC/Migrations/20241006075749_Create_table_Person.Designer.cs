@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoMVC.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240922141745_Create_table_Person")]
+    [Migration("20241006075749_Create_table_Person")]
     partial class Create_table_Person
     {
         /// <inheritdoc />
@@ -18,6 +18,24 @@ namespace DemoMVC.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
+
+            modelBuilder.Entity("DemoMVC.Models.Person", b =>
+                {
+                    b.Property<string>("CCCD")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Hoten")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("QueQuan")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("CCCD");
+
+                    b.ToTable("Person");
+                });
 #pragma warning restore 612, 618
         }
     }
